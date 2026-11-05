@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#1f7a6b">
+<title>KAIRÓS Reader</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-theme="light">
+  <header class="bar">
+    <div class="brand"><span class="dot">●</span> KAIRÓS <span class="sub">Reader</span></div>
+    <div class="tools">
+      <button id="btnText" class="icon" title="Texto grande" aria-label="Texto grande">A<sup>+</sup></button>
+      <button id="btnTheme" class="icon" title="Claro / oscuro" aria-label="Claro u oscuro">◑</button>
+      <button id="btnTeacher" class="icon" title="Mapa vivo (docente)" aria-label="Mapa del docente">▧</button>
+    </div>
+  </header>
+
+  <main id="screen" class="screen"><!-- render dinámico --></main>
+
+  <footer class="foot">
+    <span id="engineLabel" class="engine">medición local (prototipo)</span>
+    <span class="zeros">· offline · sin nube · sin cuentas · sin cámara</span>
+  </footer>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>

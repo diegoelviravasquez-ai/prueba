@@ -1,0 +1,8 @@
+{
+  "name": "kairos-reader",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "KAIRÓS Reader — PWA offline de lectura con facilitación prosódica (piel de EMMA).",
+  "private": true,
+  "license": "AGPL-3.0-only"
+}

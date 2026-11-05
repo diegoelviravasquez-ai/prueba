@@ -1,0 +1,85 @@
+:root{
+  --crema:#faf7f2; --tinta:#241f1a; --barro:#c0562a; --jade:#1f7a6b;
+  --card:#ffffff; --linea:rgba(60,40,20,.14); --muted:#7a7065; --soft:rgba(31,122,107,.10);
+  --radius:18px; --maxw:620px;
+}
+:root[data-theme="dark"]{
+  --crema:#191613; --tinta:#f2ece3; --barro:#e0763f; --jade:#49b9a4;
+  --card:#231f1b; --linea:rgba(255,240,220,.14); --muted:#b4a899; --soft:rgba(73,185,164,.14);
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{
+  font:17px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;
+  background:var(--crema); color:var(--tinta);
+  min-height:100vh; display:flex; flex-direction:column;
+  -webkit-font-smoothing:antialiased;
+}
+body.big{font-size:20px}
+body.big .word{font-size:62px}
+
+/* barra */
+.bar{display:flex; align-items:center; justify-content:space-between;
+  padding:14px 18px; border-bottom:1px solid var(--linea);}
+.brand{font-weight:700; letter-spacing:.01em}
+.brand .dot{color:var(--barro); margin-right:4px}
+.brand .sub{color:var(--muted); font-weight:500}
+.tools{display:flex; gap:8px}
+.icon{font:600 15px system-ui; background:transparent; color:var(--tinta);
+  border:1px solid var(--linea); border-radius:999px; width:40px; height:36px; cursor:pointer}
+.icon:hover{border-color:var(--jade)}
+.icon.active{background:var(--soft); border-color:var(--jade); color:var(--jade)}
+
+/* pantalla */
+.screen{flex:1; width:100%; max-width:var(--maxw); margin:0 auto; padding:26px 18px 10px;
+  display:flex; flex-direction:column; justify-content:center; gap:16px}
+.card{background:var(--card); border:1px solid var(--linea); border-radius:var(--radius); padding:24px}
+
+/* disposición */
+.lead{font-size:15px; color:var(--muted); margin:0 0 2px}
+.h1{font:600 26px/1.2 Georgia,"Iowan Old Style",serif; margin:0 0 6px}
+.disp{display:flex; gap:12px; margin-top:10px; flex-wrap:wrap}
+.disp button{flex:1; min-width:92px; background:var(--card); border:1px solid var(--linea);
+  border-radius:16px; padding:18px 10px; cursor:pointer; font-size:15px; color:var(--tinta)}
+.disp button:hover{border-color:var(--jade)}
+.disp .emo{display:block; font-size:34px; margin-bottom:6px}
+
+/* lectura */
+.word{font:600 48px/1.1 Georgia,"Iowan Old Style",serif; margin:0 0 4px; letter-spacing:-.01em}
+.meta{font-size:13px; color:var(--muted); margin:2px 0 14px}
+.meta b{color:var(--barro)}
+.lvl{display:inline-block; font-size:11px; color:var(--barro); font-weight:700; letter-spacing:.05em; text-transform:uppercase}
+.task{background:var(--soft); border:1px solid var(--jade); border-radius:14px; padding:14px 16px; margin:12px 0; font-size:16px}
+.hint-dim{opacity:.45}
+
+/* botones de acción */
+.actions{display:flex; gap:10px; flex-wrap:wrap; margin-top:6px}
+button.primary,button.rec,button.play,button.ghost{
+  font:600 15px system-ui; border:0; border-radius:999px; padding:14px 22px; cursor:pointer}
+.play{background:var(--barro); color:#fff}
+.rec{background:var(--tinta); color:var(--crema)}
+.rec[disabled]{opacity:.5; cursor:default}
+.primary{background:var(--jade); color:#fff}
+.ghost{background:transparent; color:var(--tinta); border:1px solid var(--linea)}
+.recording{display:flex; align-items:center; gap:12px; margin-top:8px; color:var(--barro); font-weight:600}
+.pulse{width:14px; height:14px; border-radius:50%; background:var(--barro); animation:p 1s infinite}
+@keyframes p{0%,100%{transform:scale(.7);opacity:.6}50%{transform:scale(1.15);opacity:1}}
+
+/* dominado */
+.done{background:var(--soft); border:1px solid var(--jade); border-radius:16px; padding:22px; text-align:center}
+.done .big{font:600 26px Georgia,serif; color:var(--jade)}
+.check{font-size:40px}
+
+/* mapa docente */
+.trace{display:flex; align-items:flex-end; gap:6px; height:120px; margin:14px 0; padding:10px;
+  background:var(--soft); border-radius:12px}
+.trace .b{flex:1; background:var(--jade); border-radius:4px 4px 0 0; min-height:4px; position:relative}
+.trace .b span{position:absolute; top:-18px; left:50%; transform:translateX(-50%); font-size:10px; color:var(--muted)}
+.row{display:flex; justify-content:space-between; font-size:13px; color:var(--muted); padding:4px 0; border-bottom:1px solid var(--linea)}
+.note{font-size:12px; color:var(--muted); font-style:italic; margin-top:10px}
+
+/* pie */
+.foot{max-width:var(--maxw); width:100%; margin:0 auto; padding:10px 18px 18px; font-size:11.5px; color:var(--muted)}
+.engine{font-weight:600; color:var(--jade)}
+.banner{background:rgba(192,86,42,.1); border:1px solid var(--barro); color:var(--barro);
+  border-radius:10px; padding:8px 12px; font-size:12.5px; margin-top:8px}
